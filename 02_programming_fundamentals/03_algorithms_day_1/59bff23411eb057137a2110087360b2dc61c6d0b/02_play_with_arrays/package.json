@@ -1,0 +1,13 @@
+{
+  "name": "02_play_with_arrays",
+  "version": "1.0.0",
+  "main": "./src/index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "eslint --ext .js,.ts . && jest"
+  },
+  "devDependencies": {
+    "eslint": "7.7.0",
+    "jest": "26.4.2"
+  }
+}
