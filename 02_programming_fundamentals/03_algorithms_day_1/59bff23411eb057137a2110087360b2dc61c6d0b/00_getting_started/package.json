@@ -1,0 +1,37 @@
+{
+  "name": "00_getting_started",
+  "version": "1.0.0",
+  "main": "./src/index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "test": "eslint --ext .js,.ts . && jest"
+  },
+  "devDependencies": {
+    "eslint": "7.7.0",
+    "jest": "26.4.2"
+  },
+  "eslintConfig": {
+    "root": true,
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module"
+    },
+    "extends": [
+      "eslint:recommended"
+    ],
+    "env": {
+      "browser": true,
+      "node": true
+    },
+    "ignorePatterns": [
+      "node_modules/",
+      "*.test.js",
+      "src.sample/*",
+      "readCode.js"
+    ],
+    "rules": {
+      "no-unused-vars": "off"
+    }
+  }
+}
