@@ -1,0 +1,14 @@
+{
+  "name": "07_pattern_bonus",
+  "version": "1.0.0",
+  "main": "./src/01_complete_the_pattern.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node ./src/01_complete_the_pattern.js",
+    "test": "eslint --ext .js,.ts . && jest"
+  },
+  "devDependencies": {
+    "eslint": "7.7.0",
+    "jest": "26.4.2"
+  }
+}

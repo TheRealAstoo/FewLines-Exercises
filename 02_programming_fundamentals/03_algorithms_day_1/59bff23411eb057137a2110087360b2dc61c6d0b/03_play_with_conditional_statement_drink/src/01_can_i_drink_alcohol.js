@@ -5,29 +5,16 @@
 
 const frieda = {
   age: 22,
-  name: "Frieda"
+  name: "Frieda",
 };
 
 const francis = {
   age: 17,
-  name: "Francis"
+  name: "Francis",
 };
 
-let canFrancisDrinkAlcohol;
-let canFriedaDrinkAlcohol;
-
-if (francis.age > 18) {
-  canFrancisDrinkAlcohol = true;
-} else {
-  canFrancisDrinkAlcohol = false;
-}
-
-if (frieda.age > 18) {
-  canFriedaDrinkAlcohol = true;
-} else {
-  canFriedaDrinkAlcohol = false;
-}
-
+const canFriedaDrinkAlcohol = frieda.age > 18;
+const canFrancisDrinkAlcohol = francis.age > 18;
 
 // Create two variables `canFriedaDrinkAlcohol` and `canFrancisDrinkAlcohol` to answer,
 // respectively, to the question "Can he / she drink alcohol?".
