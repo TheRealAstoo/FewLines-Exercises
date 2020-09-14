@@ -13,6 +13,5 @@ function fibo(n) {
   return result[n];
 }
 
-console.log(fibo(10));
 // do not remove this line, it is for tests
 module.exports = fibo;

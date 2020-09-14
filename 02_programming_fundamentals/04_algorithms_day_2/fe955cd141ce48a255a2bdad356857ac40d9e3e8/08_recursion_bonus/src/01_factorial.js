@@ -1,20 +1,21 @@
 function fact(n) {
   let f = [];
-  if (n === 1 || n === 0)
-    return 1;
-  if (n < 0)
-    return null;
-  if (f[n] > 0)
-    return f[n];
+  let calc;
 
-  f[n] = fact(n-1) * n;
-
-  const calc = f.reduce(function(accumulator, currentValue) {
-    return accumulator + currentValue;
-  });
-
+  if (n === 0) {
+    calc = 1;
+  } else if (n < 0) {
+    calc = null;
+  } else {
+    for (let i = 1; i <= n; i++) {
+      f.push(i);
+    }
+  
+    calc = f.reduce(function(accumulator, currentValue) {
+      return accumulator * currentValue;
+    });
+  }
   return calc;
 }
-
 // do not remove this line, it is for tests
 module.exports = fact;
