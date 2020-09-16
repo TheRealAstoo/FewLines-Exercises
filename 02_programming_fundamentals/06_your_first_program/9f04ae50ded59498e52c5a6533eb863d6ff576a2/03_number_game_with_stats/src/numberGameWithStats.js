@@ -2,6 +2,7 @@ const numberGameWithStats = (reader, min = 1, max = 100) => {
   const mysteryNumber = Math.round(Math.random() * (max - min) + min);
   console.log(mysteryNumber);
   const attempts = [];
+  
   let userQuestion = "Adventurer, you will pass if you guess my magical number \n> ";
   const askForNumber = () => {
     reader.question(userQuestion, (guessedNumber) => {
