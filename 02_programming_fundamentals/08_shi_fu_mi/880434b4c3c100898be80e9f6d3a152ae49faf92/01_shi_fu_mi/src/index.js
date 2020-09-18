@@ -73,7 +73,6 @@ const startTheGame = () => {
         } else {
           console.log("Je pense que vous vous êtes trompé de touche 🤔\n");
         }
-        return player2Move;
       };
 
       const playTheGame = () => {
@@ -93,7 +92,7 @@ const startTheGame = () => {
               });
             }
 
-            const secondPlayerMove = moves[Object.keys(moves)[playerOrIA()]]
+            const secondPlayerMove = moves[Object.keys(moves)[+player2Move]]
               .join("\n")
               .split("")
               .reverse()
@@ -105,14 +104,14 @@ const startTheGame = () => {
             console.log(`First Player's move \n ${moves[Object.keys(moves)[playerMove - 1]].join("\n")} \n`);
             console.log(`Second Player's move \n ${secondPlayerMove}\n`);
 
-            if (playerMove == playerOrIA() + 1) {
+            if (playerMove == +player2Move + 1) {
               theRobotSpeak = "Celle là c'était pour du beurre, on en refait une ? 😎😎 (y/n) \n >";
               result = "Ex aequo";
               reloadGame(result, theRobotSpeak);
             } else if (
-              (playerMove == 1 && playerOrIA() + 1 === 2) ||
-              (playerMove == 2 && playerOrIA() + 1 === 3) ||
-              (playerMove == 3 && playerOrIA() + 1 === 1)
+              (playerMove == 1 && +player2Move + 1 === 2) ||
+              (playerMove == 2 && +player2Move + 1 === 3) ||
+              (playerMove == 3 && +player2Move + 1 === 1)
             ) {
               result = "perdre";
               theRobotSpeak = "Tu veux essayer de re perdre ? 😎😎 (y/n) \n >";
