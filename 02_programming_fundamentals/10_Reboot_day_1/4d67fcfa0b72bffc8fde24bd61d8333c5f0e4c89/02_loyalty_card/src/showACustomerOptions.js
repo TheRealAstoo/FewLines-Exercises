@@ -14,7 +14,7 @@ const showACustomerOptions = (customerSelected, reader, showCustomers, vendorMac
   console.log("6 - Back to menu");
   console.log("7 - Quit");
 
-  reader.question(`🤖 Choose an action for ${customerSelected.fullName()}`, (actionInput) => {
+  reader.question(`🤖 Choose an action for ${customerSelected.fullName()}\n`, (actionInput) => {
     switch (actionInput) {
       case "1": 
         showCustomerAccount(customerSelected, showACustomerOptions, reader);

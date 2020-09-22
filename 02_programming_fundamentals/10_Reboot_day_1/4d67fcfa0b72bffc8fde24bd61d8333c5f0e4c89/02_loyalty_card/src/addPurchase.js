@@ -12,13 +12,13 @@ const addPurchase = (customerSelected, showACustomerOptions, reader) => {
 
   today = dd + "/" + mm + "/" + yyyy;
 
-  reader.question("🤖 Purchase amount", (amountInput) => {
-    purchase.amount = amountInput;
+  reader.question("🤖 Purchase amount \n", (amountInput) => {
+    purchase.amount = customerSelected.fidelityPoints ? amountInput - customerSelected.fidelityPoints : amountInput;
     purchase.date = today;
 
     customerSelected.purchaseHistory.push(purchase);
     customerSelected.fidelityPoints += (purchase.amount / 10);
-    showACustomerOptions();
+    showACustomerOptions(customerSelected, reader);
   });
 };
 
