@@ -4,10 +4,10 @@ abstract class Tree {
   height: number;
   alive: boolean = true;
 
-  constructor(age: number) {
-  this.age = age;
+  constructor(age: number, alive: boolean) {
+    this.age = age;
     this.height = this.calculateHeight(age);
-    
+    this.alive = alive;
   }
 
   calculateHeight(age: number): number {

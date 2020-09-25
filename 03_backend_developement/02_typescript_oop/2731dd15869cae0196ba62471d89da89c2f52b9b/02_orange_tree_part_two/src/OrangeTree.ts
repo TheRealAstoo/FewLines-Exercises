@@ -14,7 +14,7 @@ class OrangeTree extends Tree {
     this.age += 1,
     this.calculateHeight(this.age),
     this.isAlive(),
-    this.growOranges(this.age)
+    this.growOranges()
   }
 
   isAlive(): boolean {

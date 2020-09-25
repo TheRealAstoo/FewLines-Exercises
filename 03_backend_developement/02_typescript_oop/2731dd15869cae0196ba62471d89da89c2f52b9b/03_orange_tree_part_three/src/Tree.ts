@@ -20,7 +20,6 @@ abstract class Tree {
   }
 
 
-
   abstract ageOneYear(): void;
   protected abstract _isAlive(): boolean;
 
