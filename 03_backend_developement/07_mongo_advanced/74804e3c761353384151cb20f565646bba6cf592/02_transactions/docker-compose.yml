@@ -1,0 +1,26 @@
+version: '3.7'
+services:
+  mongodb_container:
+    image: mongo:4.4.1
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password
+      MONGO_INITDB_DATABASE: mongo-advanced
+      MONGO_DATA_DIR: /data/db
+    ports:
+      - 27017:27017
+    volumes:
+      - ./utils/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    command: mongod --replSet rs0
+  mongodb_test_container:
+    image: mongo:4.4.1
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password
+      MONGO_INITDB_DATABASE: mongo-advanced
+      MONGO_DATA_DIR: /data/db
+    ports:
+      - 27016:27017
+    volumes:
+      - ./utils/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    command: mongod --replSet rs0
