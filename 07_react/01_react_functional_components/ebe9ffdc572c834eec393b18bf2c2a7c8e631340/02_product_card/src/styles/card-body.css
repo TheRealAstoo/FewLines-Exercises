@@ -1,0 +1,43 @@
+#summary {
+  color: white;
+  font-size: 14px;
+}
+
+#right-card-content {
+  flex-direction: column;
+  color: white;
+}
+
+.platform-logo {
+  height: 5rem;
+  width: 5rem;
+}
+
+.screenshots-bg {
+  background-color: #cecdcd;
+  background: cover;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.button-screenshots-text {
+  background-color: #252a2e;
+  padding: 1rem;
+  color: white;
+  border-radius: 5px;
+}
+
+.button-screenshots-close {
+  background-color: #252a2e;
+  padding: 1rem;
+  color: white;
+  position: relative;
+  top: 6px;
+  right: -209px;
+  border-radius: 50%;
+}
+
+.screenshot-image
