@@ -1,0 +1,22 @@
+#app {
+  width: 100%;
+  height: 100vh;
+}
+
+.default-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-group-item p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.timers-list {
+  width: 300px;
+}
